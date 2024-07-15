@@ -5,12 +5,12 @@ import { Typography, Grid, Card, CardContent } from '@mui/material';
 const CompaniesSection: React.FC = () => {
   return (
     <div>
-      <Typography variant="h4" align="center">Their Companies</Typography>
+      <Typography variant="h4" align="center" sx={{ fontWeight: "bold",}}>Their Companies</Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <Card>
             <CardContent>
-              <Typography variant="h5">Wayne Enterprises</Typography>
+              <Typography variant="h5" sx={{ fontWeight: "bold",}}>Wayne Enterprises</Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 Wayne Enterprises is a multi-billion dollar conglomerate owned by Bruce Wayne. It funds Batman's crime-fighting activities and provides resources for his advanced technology.
               </Typography>
@@ -20,7 +20,7 @@ const CompaniesSection: React.FC = () => {
         <Grid item xs={12} md={6}>
           <Card>
             <CardContent>
-              <Typography variant="h5">Stark Industries</Typography>
+              <Typography variant="h5"  sx={{ fontWeight: "bold",}}>Stark Industries</Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 Stark Industries is a tech conglomerate founded by Howard Stark and run by Tony Stark. It is at the forefront of technological innovation, providing the resources for Iron Man's suits and inventions.
               </Typography>
