@@ -32,7 +32,11 @@ const LandingPage: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
               >
-                <Typography variant="h2" align="center">
+                <Typography
+                  variant="h2"
+                  align="center"
+                  sx={{ color: "white", fontWeight: "bold" }}
+                >
                   Batman vs Ironman
                 </Typography>
               </motion.div>
