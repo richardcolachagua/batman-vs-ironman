@@ -14,7 +14,11 @@ const VotingPollSection: React.FC = () => {
 
   return (
     <div>
-      <Typography variant="h4" align="center">
+      <Typography
+        variant="h4"
+        align="center"
+        sx={{ color: "white", fontWeight: "bold", paddingBottom: "10px" }}
+      >
         Who Would Win?
       </Typography>
       <Grid container spacing={3} justifyContent="center">

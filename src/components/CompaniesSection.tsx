@@ -10,7 +10,7 @@ const CompaniesSection: React.FC = () => {
         align="center"
         sx={{ color: "white", fontWeight: "bold" }}
       >
-        Their Companies
+        Titans Of Industry
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
@@ -22,11 +22,23 @@ const CompaniesSection: React.FC = () => {
               image="/assets/Wayne_Enterprises_building.png"
               title="Wayne Enterprises"
             />
-            <CardContent>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+            <CardContent sx={{ background: "black" }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  color: "white",
+                  fontWeight: "bold",
+                  paddingBottom: "10px",
+                }}
+              >
                 Wayne Enterprises
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                component="p"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
                 Wayne Enterprises (formerly WayneCorp) is a company in the DC
                 Universe. Wayne Enterprises is owned by billionaire Bruce Wayne
                 and run by his business manager Lucius Fox. It was founded by
@@ -52,11 +64,23 @@ const CompaniesSection: React.FC = () => {
               image="/assets/Stark_Industries_Corporate_office_in_New_York.png"
               title="Wayne Enterprises"
             />
-            <CardContent>
-              <Typography variant="h5" sx={{ fontWeight: "bold" }}>
+            <CardContent sx={{ background: "black" }}>
+              <Typography
+                variant="h5"
+                sx={{
+                  color: "white",
+                  fontWeight: "bold",
+                  paddingBottom: "10px",
+                }}
+              >
                 Stark Industries
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography
+                variant="body2"
+                color="textSecondary"
+                component="p"
+                sx={{ color: "white", fontWeight: "bold" }}
+              >
                 Stark Industries is a multinational industrial company and the
                 largest tech conglomerate in the world. Founded in 1939 by
                 Howard Stark, the elder Stark ran the company from its inception

@@ -78,9 +78,9 @@ const BioSection: React.FC = () => {
                 component="p"
                 sx={{ color: "white", fontWeight: "bold" }}
               >
-                Anthony Edward "Tony" Stark was a billionaire industrialist, a
+                Anthony Edward "Tony" Stark is a billionaire industrialist, a
                 founding member of the Avengers, and the former CEO of Stark
-                Industries. A brash but brilliant inventor, Stark was
+                Industries. A brash but brilliant inventor, Stark is
                 self-described as a genius, billionaire, playboy, and
                 philanthropist. With his great wealth and exceptional technical
                 knowledge, Stark was one of the world's most powerful men
