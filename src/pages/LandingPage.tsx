@@ -8,6 +8,8 @@ import AdvantagesSection from "../components/AdvantagesSection";
 import CompaniesSection from "../components/CompaniesSection";
 import CombatSkillsSection from "../components/CombatSkillsSection";
 import StrategiesSection from "../components/StrategiesSection";
+import MultimediaSection from "../components/MultimediaSection";
+import VotingPollSection from "../components/VotingPollSection";
 
 const LandingPage: React.FC = () => {
   const defaultTheme = createTheme();
@@ -58,6 +60,12 @@ const LandingPage: React.FC = () => {
             </Grid>
             <Grid item xs={12}>
               <StrategiesSection />
+            </Grid>
+            <Grid item xs={12}>
+              <MultimediaSection />
+            </Grid>
+            <Grid item xs={12}>
+              <VotingPollSection />
             </Grid>
           </Grid>
         </Container>

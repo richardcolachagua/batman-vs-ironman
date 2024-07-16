@@ -10,7 +10,7 @@ const BioSection: React.FC = () => {
         align="center"
         sx={{ color: "white", fontWeight: "bold", paddingBottom: "10px" }}
       >
-        Bios
+        Character Origins
       </Typography>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
