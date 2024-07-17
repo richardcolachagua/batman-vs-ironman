@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Typography, Grid, Box, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import BioSection from "../components/BioSection";
 import SuitsSection from "../components/SuitsSection";
 import AdvantagesSection from "../components/AdvantagesSection";
@@ -13,6 +13,8 @@ import VotingPollSection from "../components/VotingPollSection";
 
 const LandingPage: React.FC = () => {
   const defaultTheme = createTheme();
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.5]);
 
   return (
     <Box
@@ -30,6 +32,7 @@ const LandingPage: React.FC = () => {
           <Grid container spacing={3}>
             <Grid item xs={12}>
               <motion.div
+                style={{ scale }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
