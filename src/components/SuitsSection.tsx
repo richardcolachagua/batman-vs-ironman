@@ -23,17 +23,27 @@ const SuitsSection: React.FC = () => {
 
   return (
     <div>
-      <Typography variant="h4" align="center">
+      <Typography
+        variant="h4"
+        align="center"
+        marginBottom={5}
+        sx={{ fontWeight: "bold", color: "white " }}
+      >
         Suits
       </Typography>
       <Grid container spacing={3}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <motion.div style={{ scale }}>
             {batmanSuits.map((suit, index) => (
               <Card
                 key={index}
-                style={{ marginBottom: "16px", cursor: "pointer" }}
                 onClick={() => handleSuitClick(suit)}
+                sx={{
+                  marginBottom: "30px",
+                  cursor: "pointer",
+                  width: "100%", // or any specific width you want
+                  maxWidth: "400px",
+                }}
               >
                 <CardMedia
                   component="img"
@@ -56,12 +66,13 @@ const SuitsSection: React.FC = () => {
             ))}
           </motion.div>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <motion.div style={{ scale }}>
             {ironManSuits.map((suit, index) => (
               <Card
                 key={index}
-                style={{ marginBottom: "16px" }}
+                style={{ marginBottom: "30px", cursor: "pointer" }}
+                sx={{ width: "100%", maxWidth: "400px" }}
                 onClick={() => handleSuitClick(suit)}
               >
                 <CardMedia

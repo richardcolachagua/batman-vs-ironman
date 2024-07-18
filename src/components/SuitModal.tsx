@@ -44,7 +44,14 @@ const SuitModal: React.FC<SuitModalProps> = ({ suit, onClose }) => {
           }}
           onClick={onClose}
         >
-          <Card style={{ maxWidth: "600px" }}>
+          <Card
+            sx={{
+              width: "90%",
+              maxWidth: "600px",
+              maxHeight: "90vh",
+              overflow: "auto",
+            }}
+          >
             <CardMedia
               component="img"
               alt={suit.name}
