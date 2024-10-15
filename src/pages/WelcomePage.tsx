@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { Typography, Button, Box } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const WelcomePage: React.FC = () => {
@@ -14,17 +14,33 @@ const WelcomePage: React.FC = () => {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
+        alignItems: "left",
         justifyContent: "center",
       }}
     >
-      <Typography variant="h3" align="center" sx={{ fontWeight: "bold" }}>
+      <Typography
+        variant="h3"
+        align="left"
+        sx={{ fontWeight: "bold", color: "white", paddingLeft: "30px" }}
+      >
         The Clash of the Billionaires
       </Typography>
-      <Typography variant="h3" align="center" sx={{ fontWeight: "bold" }}>
+      <Typography
+        variant="h3"
+        align="left"
+        sx={{ fontWeight: "bold", color: "white", paddingLeft: "30px" }}
+      >
         Two Geniuses
       </Typography>
-      <Typography variant="h4" align="center" sx={{ fontWeight: "bold" }}>
+      <Typography
+        align="left"
+        sx={{
+          fontWeight: "bold",
+          color: "white",
+          fontSize: "20px",
+          paddingLeft: "30px",
+        }}
+      >
         Two trauma damaged men, fighting their own demons by fighting crime
       </Typography>
 
@@ -33,9 +49,13 @@ const WelcomePage: React.FC = () => {
         to="/landing"
         variant="contained"
         sx={{
-          alignItems: "center",
-          color: "white",
-          backgroundColor: "black",
+          alignItems: "left",
+          color: "black",
+          backgroundColor: "white",
+          paddingLeft: "20px",
+          marginLeft: "30px",
+          margin: "30px",
+          width: "340px",
         }}
       >
         Go to landing page
