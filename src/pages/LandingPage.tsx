@@ -11,6 +11,7 @@ import StrategiesSection from "../components/StrategiesSection";
 import MultimediaSection from "../components/MultimediaSection";
 import VotingPollSection from "../components/VotingPollSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import SuitDisplay from "../components/suit-display/SuitDisplay";
 
 const LandingPage: React.FC = () => {
   const defaultTheme = createTheme();
@@ -42,9 +43,9 @@ const LandingPage: React.FC = () => {
               <Grid item xs={12}>
                 <BioSection />
               </Grid>
-              <Grid item xs={12}>
-                <SuitsSection />
-              </Grid>
+              <Box>
+                <SuitDisplay />
+              </Box>
               <Grid item xs={12}>
                 <AdvantagesSection />
               </Grid>
