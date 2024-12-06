@@ -1,20 +1,29 @@
 // src/components/BioSection.tsx
 import React from "react";
-import { Typography, Grid, Card, CardContent, CardMedia } from "@mui/material";
+import {
+  Typography,
+  Grid,
+  Card,
+  CardContent,
+  CardMedia,
+  Stack,
+  Box,
+} from "@mui/material";
 
 const BioSection: React.FC = () => {
   return (
     <>
       <Typography
-        variant="h4"
-        align="center"
-        sx={{ color: "white", fontWeight: "bold", paddingBottom: "10px" }}
+        variant="h1"
+        align="left"
+        sx={{ color: "black", fontWeight: "bold", paddingBottom: "30px" }}
       >
         Character Origins
       </Typography>
-      <Grid container spacing={3}>
+
+      <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
-          <Card>
+          <Card sx={{ backgroundColor: "transparent", boxShadow: "none" }}>
             <CardMedia
               component="img"
               alt="Bruce Wayne"
@@ -22,36 +31,43 @@ const BioSection: React.FC = () => {
               image="/assets/Batman_during_prep_time_getting_ready_to_fight.png"
               title="Bruce Wayne"
             />
-            <CardContent sx={{ background: "black" }}>
-              <Typography
-                variant="h5"
-                sx={{
-                  color: "white",
-                  fontWeight: "bold",
-                  paddingBottom: "10px",
-                }}
-              >
-                Bruce Wayne
-              </Typography>
-              <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-                sx={{ color: "white", fontWeight: "bold" }}
-              >
-                Batman is the superhero protector of Gotham City, a tortured,
-                brooding vigilante dressed as a bat who fights against evil and
-                strikes fear into the hearts of criminals everywhere. In his
-                public identity, he is Bruce Wayne, a billionaire industrialist
-                and notorious playboy. Although he has no superhuman abilities,
-                he is one of the world's smartest men and greatest fighters. His
-                physical prowess, technical ingenuity, and tactical thinking
-                make him an incredibly dangerous opponent. He was also a
-                founding member of the Justice League.
-              </Typography>
-            </CardContent>
           </Card>
         </Grid>
+
+        <Grid item xs={12} md={6}>
+          <Stack spacing={3}>
+            <Typography
+              variant="h2"
+              sx={{
+                color: "yellow",
+                fontWeight: "bold",
+                fontSize: "2rem",
+              }}
+            >
+              Bruce Wayne
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{
+                color: "yellow",
+                fontWeight: "bold",
+                fontSize: "1.2rem",
+                lineHeight: 1.6,
+              }}
+            >
+              Batman is the superhero protector of Gotham City, a tortured,
+              brooding vigilante dressed as a bat who fights against evil and
+              strikes fear into the hearts of criminals everywhere. In his
+              public identity, he is Bruce Wayne, a billionaire industrialist
+              and notorious playboy. Although he has no superhuman abilities, he
+              is one of the world's smartest men and greatest fighters. His
+              physical prowess, technical ingenuity, and tactical thinking make
+              him an incredibly dangerous opponent. He was also a founding
+              member of the Justice League.
+            </Typography>
+          </Stack>
+        </Grid>
+
         <Grid item xs={12} md={6}>
           <Card>
             <CardMedia

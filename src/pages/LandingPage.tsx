@@ -43,9 +43,7 @@ const LandingPage: React.FC = () => {
               <Grid item xs={12}>
                 <BioSection />
               </Grid>
-              <Box>
-                <SuitDisplay />
-              </Box>
+
               <Grid item xs={12}>
                 <AdvantagesSection />
               </Grid>

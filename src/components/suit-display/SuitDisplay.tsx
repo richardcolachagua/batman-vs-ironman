@@ -1,7 +1,7 @@
 import "./styles.css";
 import { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
-import { Box, Container } from "@mui/material";
+import { Container } from "@mui/material";
 
 export default function SuitDisplay() {
   const ref = useRef(null);
