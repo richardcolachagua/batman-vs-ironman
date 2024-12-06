@@ -20,7 +20,6 @@ const LandingPage: React.FC = () => {
     <>
       <Box
         sx={{
-          backgroundImage: `url("/assets/Ironman_and_Batman_fighting_each_other.png")`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
