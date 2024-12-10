@@ -1,9 +1,8 @@
 import React from "react";
 import "../styles.css";
-import { Container, Typography, Grid, Box, CssBaseline } from "@mui/material";
+import { Container, Grid, Box, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import BioSection from "../components/BioSection";
-import SuitsSection from "../components/Suits/SuitsSection";
 import AdvantagesSection from "../components/AdvantagesSection";
 import CompaniesSection from "../components/CompaniesSection";
 import CombatSkillsSection from "../components/CombatSkillsSection";
@@ -11,7 +10,6 @@ import StrategiesSection from "../components/StrategiesSection";
 import MultimediaSection from "../components/MultimediaSection";
 import VotingPollSection from "../components/VotingPollSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
-import SuitDisplay from "../components/suit-display/SuitDisplay";
 
 const LandingPage: React.FC = () => {
   const defaultTheme = createTheme();
