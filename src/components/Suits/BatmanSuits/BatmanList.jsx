@@ -1,5 +1,5 @@
 import React from "react";
-import { ironmanItems } from "./Data/ironManSuits";
+import { items } from "./data";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -31,7 +31,7 @@ function Card({ id, name, abilities, theme }) {
 export function List({ selectedId }) {
   return (
     <ul className="card-list">
-      {ironmanItems.map((card) => (
+      {items.map((card) => (
         <Card key={card.id} {...card} isSelected={card.id === selectedId} />
       ))}
     </ul>

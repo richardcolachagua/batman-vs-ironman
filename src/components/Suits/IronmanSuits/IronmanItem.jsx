@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ironmanItems } from "./Data/ironManSuits";
+import { ironManSuits } from "./Data/ironManSuits";
 import { Typography } from "@mui/material";
 
-export function Item({ id }) {
-  const { category, title } = ironmanItems.find((item) => item.id === id);
+export function IronManItem({ id }) {
+  const { category, title } = ironManSuits.find((item) => item.id === id);
 
   return (
     <>

@@ -1,4 +1,4 @@
-export const ironmanItems = [
+export const ironManSuits = [
   {
     id: 2,
     name: "Mark I",
@@ -51,4 +51,4 @@ export const ironmanItems = [
   },
 ];
 
-export default ironmanItems;
+export default ironManSuits;
