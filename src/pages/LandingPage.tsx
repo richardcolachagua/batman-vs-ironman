@@ -3,7 +3,7 @@ import "../styles.css";
 import { Container, Typography, Grid, Box, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import BioSection from "../components/BioSection";
-import SuitsSection from "../components/SuitsSection";
+import SuitsSection from "../components/Suits/SuitsSection";
 import AdvantagesSection from "../components/AdvantagesSection";
 import CompaniesSection from "../components/CompaniesSection";
 import CombatSkillsSection from "../components/CombatSkillsSection";
@@ -30,15 +30,6 @@ const LandingPage: React.FC = () => {
           <Container>
             <CssBaseline />
             <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <Typography
-                  variant="h2"
-                  align="center"
-                  sx={{ color: "white", fontWeight: "bold" }}
-                >
-                  Batman vs Ironman
-                </Typography>
-              </Grid>
               <Grid item xs={12}>
                 <BioSection />
               </Grid>

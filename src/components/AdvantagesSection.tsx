@@ -1,10 +1,19 @@
 // src/components/AdvantagesSection.tsx
 import React from "react";
-import { Typography, Grid, Card, CardContent } from "@mui/material";
+import { Typography, Grid, Card, CardContent, Box } from "@mui/material";
 
 const AdvantagesSection: React.FC = () => {
   return (
-    <div>
+    <Box
+      sx={{
+        backgroundColor: "black",
+        backgroundSize: "cover",
+        width: "100vw",
+        margin: 0,
+        padding: "40px 20px",
+        overflow: "hidden",
+      }}
+    >
       <Typography
         variant="h4"
         align="center"
@@ -58,7 +67,7 @@ const AdvantagesSection: React.FC = () => {
           </Card>
         </Grid>
       </Grid>
-    </div>
+    </Box>
   );
 };
 
