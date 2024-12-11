@@ -1,31 +1,30 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import { Header } from "./Header";
-import { IronmanItem } from "./IronmanItem";
-import { IronmanList } from "./IronmanList";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { IronManItem } from "./IronmanItem";
+import { List } from "./IronmanList";
+import { useParams, Routes, Route } from "react-router-dom";
 
-function Store({ match }) {
-  let { id } = match.params;
+function Store() {
+  let { id } = useParams();
   const imageHasLoaded = true;
 
   return (
     <>
-      <IronmanList selectedId={id} />
+      <List selectedId={id} />
       <AnimatePresence>
-        {id && imageHasLoaded && <IronmanItem id={id} key="item" />}
+        {id && imageHasLoaded && <IronManItem id={id} key="item" />}
       </AnimatePresence>
     </>
   );
 }
 
-export default function App() {
+export default function Ironman() {
   return (
     <div className="container">
-      <Header />
-      <Router>
-        <Route path={["/:id", "/"]} component={Store} />
-      </Router>
+      <Routes>
+        <Route path={["/:id", "/"]} elemq={<Store />} />
+        <Route path="/" element={<Store />} />
+      </Routes>
     </div>
   );
 }

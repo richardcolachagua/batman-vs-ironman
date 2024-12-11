@@ -10,6 +10,7 @@ import StrategiesSection from "../components/StrategiesSection";
 import MultimediaSection from "../components/MultimediaSection";
 import VotingPollSection from "../components/VotingPollSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import Ironman from "../components/Suits/IronmanSuits/Ironman";
 
 const LandingPage: React.FC = () => {
   const defaultTheme = createTheme();
@@ -34,6 +35,9 @@ const LandingPage: React.FC = () => {
 
               <Grid item xs={12}>
                 <AdvantagesSection />
+              </Grid>
+              <Grid>
+                <Ironman />
               </Grid>
               <Grid item xs={12}>
                 <CompaniesSection />

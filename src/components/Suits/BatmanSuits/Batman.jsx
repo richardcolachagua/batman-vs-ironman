@@ -1,31 +1,30 @@
 import React from "react";
 import { AnimatePresence } from "framer-motion";
-import { Header } from "./Header";
-import { Item } from "./Item";
-import { BatmanList } from "./BatmanList";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BatmanItem } from "../BatmanSuits/BatmanItem";
+import { List } from "./BatmanList";
+import { BrowserRouter as Route, Routes, useParams } from "react-router-dom";
 
-function Store({ match }) {
-  let { id } = match.params;
+function Store() {
+  let { id } = useParams();
   const imageHasLoaded = true;
 
   return (
     <>
-      <BatmanList selectedId={id} />
+      <List selectedId={id} />
       <AnimatePresence>
-        {id && imageHasLoaded && <Item id={id} key="item" />}
+        {id && imageHasLoaded && <BatmanItem id={id} key="item" />}
       </AnimatePresence>
     </>
   );
 }
 
-export default function App() {
+export default function Batman() {
   return (
     <div className="container">
-      <Header />
-      <Router>
-        <Route path={["/:id", "/"]} component={Store} />
-      </Router>
+      <Routes>
+        <Route path="/:id" element={<Store />} />
+        <Route path="/" element={<Store />} />
+      </Routes>
     </div>
   );
 }

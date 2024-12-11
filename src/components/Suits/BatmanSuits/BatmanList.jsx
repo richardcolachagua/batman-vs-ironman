@@ -1,5 +1,5 @@
 import React from "react";
-import { items } from "./data";
+import { BatmanItem } from "../BatmanSuits/BatmanItem";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -31,7 +31,7 @@ function Card({ id, name, abilities, theme }) {
 export function List({ selectedId }) {
   return (
     <ul className="card-list">
-      {items.map((card) => (
+      {BatmanItem.map((card) => (
         <Card key={card.id} {...card} isSelected={card.id === selectedId} />
       ))}
     </ul>
