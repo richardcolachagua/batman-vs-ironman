@@ -22,8 +22,8 @@ export default function Ironman() {
   return (
     <div className="container">
       <Routes>
-        <Route path={["/:id", "/"]} elemq={<Store />} />
-        <Route path="/" element={<Store />} />
+        <Route path={["/:id"]} element={<Store />} />
+        <Route path="/*" element={<Store />} />
       </Routes>
     </div>
   );

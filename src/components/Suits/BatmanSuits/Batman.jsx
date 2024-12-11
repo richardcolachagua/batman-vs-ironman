@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { BatmanItem } from "../BatmanSuits/BatmanItem";
 import { List } from "./BatmanList";
-import { BrowserRouter as Route, Routes, useParams } from "react-router-dom";
+import { Route, Routes, useParams } from "react-router-dom";
 
 function Store() {
   let { id } = useParams();
@@ -23,7 +23,7 @@ export default function Batman() {
     <div className="container">
       <Routes>
         <Route path="/:id" element={<Store />} />
-        <Route path="/" element={<Store />} />
+        <Route path="/*" element={<Store />} />
       </Routes>
     </div>
   );

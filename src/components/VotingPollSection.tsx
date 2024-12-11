@@ -1,6 +1,6 @@
 // src/components/VotingPollSection.tsx
 import React, { useState } from "react";
-import { Typography, Button, Grid, Box, Stack } from "@mui/material";
+import { Typography, Button, Grid, Box } from "@mui/material";
 
 const VotingPollSection: React.FC = () => {
   const [votes, setVotes] = useState({ batman: 0, ironman: 0 });

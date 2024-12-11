@@ -11,7 +11,7 @@ const App: React.FC = () => {
     <>
       <Router>
         <Routes>
-          <Route path="/landing/*" Component={LandingPage} />
+          <Route path="/landing/*" element={<LandingPage />} />
           <Route path="/welcomepage" element={<WelcomePage />} />
           <Route path="/batman" element={<Batman />} />
           <Route path="/ironman" element={<Ironman />} />
