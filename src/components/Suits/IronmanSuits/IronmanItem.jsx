@@ -17,7 +17,7 @@ export function IronManItem({ id }) {
         style={{ pointerEvents: "auto" }}
         className="overlay"
       >
-        <Link to="/" />
+        <Link to="/*" />
       </motion.div>
       <div className="card-content-container open">
         <motion.div className="card-content" layoutId={`card-container-${id}`}>

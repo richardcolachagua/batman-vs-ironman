@@ -1,4 +1,3 @@
-import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { IronManItem } from "./IronmanItem";
 import { List } from "./IronmanList";
@@ -22,7 +21,7 @@ export default function Ironman() {
   return (
     <div className="container">
       <Routes>
-        <Route path={["/:id"]} element={<Store />} />
+        <Route path="/:id" element={<Store />} />
         <Route path="/*" element={<Store />} />
       </Routes>
     </div>

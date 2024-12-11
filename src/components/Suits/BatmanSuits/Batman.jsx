@@ -1,4 +1,3 @@
-import React from "react";
 import { AnimatePresence } from "framer-motion";
 import { BatmanItem } from "../BatmanSuits/BatmanItem";
 import { List } from "./BatmanList";

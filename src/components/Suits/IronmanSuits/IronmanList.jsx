@@ -1,4 +1,3 @@
-import React from "react";
 import { ironManSuits } from "./Data/ironManSuits";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
