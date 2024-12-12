@@ -1,3 +1,4 @@
+import "../BatmanSuits/batmanstyles.css";
 import { AnimatePresence } from "framer-motion";
 import { BatmanItem } from "../BatmanSuits/BatmanItem";
 import { List } from "./BatmanList";

@@ -1,3 +1,4 @@
+import "../IronmanSuits/ironmanstyles.css";
 import { AnimatePresence } from "framer-motion";
 import { IronManItem } from "./IronmanItem";
 import { List } from "./IronmanList";
