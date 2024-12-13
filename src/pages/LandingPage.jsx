@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles.css";
 import { Container, Grid, Box, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -11,9 +11,36 @@ import MultimediaSection from "../components/MultimediaSection";
 import VotingPollSection from "../components/VotingPollSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import Ironman from "../components/Suits/IronmanSuits/Ironman";
+import Lenis from "@studio-freight/lenis";
 
-const LandingPage: React.FC = () => {
+const LandingPage = () => {
   const defaultTheme = createTheme();
+  const lenisRef = useRef();
+
+  useEffect(() => {
+    lenisRef.current = new Lenis({
+      duration: 3.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      direction: "vertical",
+      gestureOrientation: "vertical",
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenisRef.current.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenisRef.current.destroy();
+    };
+  }, []);
 
   return (
     <>
