@@ -7,15 +7,11 @@ const BioSection: React.FC = () => {
       sx={{
         backgroundColor: "black",
         backgroundSize: "cover",
-        width: "100vw",
-        margin: 0,
-        padding: "40px 20px",
-        overflow: "hidden",
       }}
     >
       <Typography
-        variant="h3"
-        align="left"
+        variant="h1"
+        align="center"
         sx={{ color: "white", fontWeight: "bold", paddingBottom: "40px" }}
       >
         Character Origins
@@ -53,7 +49,6 @@ const BioSection: React.FC = () => {
               sx={{
                 color: "yellow",
                 fontWeight: "bold",
-                fontSize: "2rem",
               }}
             >
               Bruce Wayne
