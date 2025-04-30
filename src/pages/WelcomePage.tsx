@@ -5,18 +5,11 @@ import VideoBackground from "../components/VideoBackground";
 
 const WelcomePage: React.FC = () => {
   return (
-    <Box
-      sx={{
-        minHeight: "100vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-      }}
-    >
+    <Box>
       <VideoBackground videoSrc="assets/WelcomePageVideo.mp4">
         <Typography
           variant="h3"
-          align="left"
+          align="center"
           sx={{ fontWeight: "bold", color: "white", paddingLeft: "30px" }}
         >
           BILLIONAIRES, GENIUSES, PLAYBOYS, PHILANTROPISTS

@@ -49,7 +49,6 @@ const LandingPage = () => {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          minHeight: "100vh",
         }}
       >
         <ThemeProvider theme={defaultTheme}>

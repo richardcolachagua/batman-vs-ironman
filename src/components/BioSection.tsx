@@ -1,24 +1,27 @@
 import React from "react";
-import { Typography, Grid, Card, CardMedia, Stack, Box } from "@mui/material";
+import {
+  Typography,
+  Grid,
+  Card,
+  CardMedia,
+  Stack,
+  Box,
+  Divider,
+} from "@mui/material";
 
 const BioSection: React.FC = () => {
   return (
-    <Box
-      sx={{
-        backgroundColor: "black",
-        backgroundSize: "cover",
-      }}
-    >
+    <Box sx={{ backgroundColor: "black", px: { xs: 2, md: 6 }, py: 5 }}>
       <Typography
         variant="h1"
         align="center"
-        sx={{ color: "white", fontWeight: "bold", paddingBottom: "40px" }}
+        sx={{ color: "white", fontWeight: "bold", pb: 5 }}
       >
         Character Origins
       </Typography>
 
-      <Grid container spacing={4} alignItems="center" sx={{ padding: "20px" }}>
-        {/* Bruce Wayne Section */}
+      {/* Bruce Wayne Section */}
+      <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
           <Card
             sx={{
@@ -46,10 +49,7 @@ const BioSection: React.FC = () => {
           <Stack spacing={3}>
             <Typography
               variant="h2"
-              sx={{
-                color: "yellow",
-                fontWeight: "bold",
-              }}
+              sx={{ color: "yellow", fontWeight: "bold" }}
             >
               Bruce Wayne
             </Typography>
@@ -74,8 +74,13 @@ const BioSection: React.FC = () => {
             </Typography>
           </Stack>
         </Grid>
+      </Grid>
 
-        {/* Tony Stark Section */}
+      {/* Divider Between Sections */}
+      <Divider sx={{ my: 6, borderColor: "gray" }} />
+
+      {/* Tony Stark Section */}
+      <Grid container spacing={4} alignItems="center">
         <Grid item xs={12} md={6}>
           <Card
             sx={{
@@ -101,14 +106,7 @@ const BioSection: React.FC = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Stack spacing={3}>
-            <Typography
-              variant="h2"
-              sx={{
-                color: "red",
-                fontWeight: "bold",
-                fontSize: "2rem",
-              }}
-            >
+            <Typography variant="h2" sx={{ color: "red", fontWeight: "bold" }}>
               Tony Stark
             </Typography>
             <Typography
@@ -128,12 +126,9 @@ const BioSection: React.FC = () => {
               knowledge, Stark was one of the world's most powerful men
               following the deaths of his parents and enjoyed the playboy
               lifestyle for many years until he was kidnapped by the Ten Rings
-              in Afghanistan, while demonstrating a fleet of Jericho missiles.
-              With his life on the line, Stark created an armored suit which he
-              used to escape his captors. Upon returning home, he utilized
-              several more armors to use against terrorists, as well as Obadiah
-              Stane who turned against Stark. Following his fight against Stane,
-              Stark publicly revealed himself as Iron Man.
+              in Afghanistan. With his life on the line, Stark created an
+              armored suit which he used to escape. Afterward, he publicly
+              revealed himself as Iron Man.
             </Typography>
           </Stack>
         </Grid>
