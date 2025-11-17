@@ -15,8 +15,7 @@ const MultimediaSection: React.FC = () => {
         container
         spacing={3}
         direction="row"
-        wrap="nowrap"
-        style={{ overflowX: "scroll" }}
+        style={{ overflowX: "auto", flexWrap: "wrap" }}
       >
         {videoIds.map((id) => (
           <Grid item key={id}>

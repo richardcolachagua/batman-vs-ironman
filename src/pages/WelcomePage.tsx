@@ -20,14 +20,16 @@ const WelcomePage: React.FC = () => {
           to="/landing"
           variant="contained"
           sx={{
-            alignItems: "left",
             color: "red",
             backgroundColor: "white",
-            paddingLeft: "20px",
-            marginLeft: "30px",
-            margin: "30px",
+            paddingX: 3,
+            paddingY: 2,
+            mx: "auto",
+            my: 4,
             width: "340px",
             borderRadius: "30px",
+            display: "block",
+            textAlign: "center",
           }}
         >
           WHO WOULD WIN IN A FIGHT?

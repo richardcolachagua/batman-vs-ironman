@@ -11,7 +11,13 @@ import {
 
 const BioSection: React.FC = () => {
   return (
-    <Box sx={{ backgroundColor: "black", px: { xs: 2, md: 6 }, py: 5 }}>
+    <Box
+      sx={{
+        backgroundColor: "black",
+        px: { xs: 2, md: 6 },
+        py: { xs: 4, md: 8 },
+      }}
+    >
       <Typography
         variant="h1"
         align="center"

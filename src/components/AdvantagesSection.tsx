@@ -8,9 +8,10 @@ const AdvantagesSection: React.FC = () => {
       sx={{
         backgroundColor: "black",
         backgroundSize: "cover",
-        width: "100vw",
-        margin: 0,
-        padding: "40px 20px",
+        width: "100&",
+        m: 0,
+        px: { xs: 2, md: 6 },
+        py: { xs: 4, md: 6 },
         overflow: "hidden",
       }}
     >
@@ -21,9 +22,9 @@ const AdvantagesSection: React.FC = () => {
       >
         Key Advantages
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
-          <Card>
+          <Card sx={{ minHeight: 250, mx: 2 }}>
             <CardContent sx={{ background: "black" }}>
               <Typography
                 variant="h5"
@@ -52,7 +53,7 @@ const AdvantagesSection: React.FC = () => {
           </Card>
         </Grid>
         <Grid item xs={12} md={6}>
-          <Card>
+          <Card sx={{ minHeight: 250, mx: 2 }}>
             <CardContent>
               <Typography variant="h5">Iron Man's Advantages</Typography>
               <Typography variant="body2" color="textSecondary" component="p">
