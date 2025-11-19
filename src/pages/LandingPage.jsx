@@ -9,6 +9,7 @@ import StrategiesSection from "../components/StrategiesSection";
 import MultimediaSection from "../components/MultimediaSection";
 import VotingPollSection from "../components/VotingPollSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
+import Batman from "../components/Suits/BatmanSuits/BatmanCarousel";
 import Ironman from "../components/Suits/IronmanSuits/Ironman";
 import Lenis from "@studio-freight/lenis";
 
@@ -63,6 +64,9 @@ const LandingPage = () => {
           </Grid>
           <Grid item xs={12}>
             <AdvantagesSection />
+          </Grid>
+          <Grid item xs={12}>
+            <Batman />
           </Grid>
           <Grid item xs={12}>
             <Ironman />
