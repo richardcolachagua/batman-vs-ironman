@@ -1,3 +1,4 @@
+//batmanSuits.jsx
 export const batmanSuits = [
   {
     id: 0,

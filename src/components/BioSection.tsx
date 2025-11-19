@@ -11,31 +11,22 @@ import {
 
 const BioSection: React.FC = () => {
   return (
-    <Box
-      sx={{
-        backgroundColor: "black",
-        px: { xs: 2, md: 6 },
-        py: { xs: 4, md: 8 },
-      }}
-    >
+    <Box sx={{ backgroundColor: "black", width: "100vw", px: 0, py: 8 }}>
       <Typography
         variant="h1"
         align="center"
-        sx={{ color: "white", fontWeight: "bold", pb: 5 }}
+        sx={{ color: "white", fontWeight: "bold", mb: 8 }}
       >
         Character Origins
       </Typography>
-
-      {/* Bruce Wayne Section */}
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6}>
           <Card
             sx={{
               backgroundColor: "transparent",
               boxShadow: "none",
-              maxWidth: 345,
-              maxHeight: 500,
-              margin: "auto",
+              width: "100%",
+              minHeight: 350,
             }}
           >
             <CardMedia
@@ -44,8 +35,9 @@ const BioSection: React.FC = () => {
               image="/assets/Batman_during_prep_time_getting_ready_to_fight.png"
               title="Bruce Wayne"
               sx={{
-                borderRadius: "10px",
-                height: "100%",
+                borderRadius: "16px",
+                width: "100%",
+                height: "auto",
                 objectFit: "cover",
               }}
             />
@@ -55,18 +47,13 @@ const BioSection: React.FC = () => {
           <Stack spacing={3}>
             <Typography
               variant="h2"
-              sx={{ color: "yellow", fontWeight: "bold" }}
+              sx={{ color: "yellow", fontWeight: "bold", mb: 3 }}
             >
               Bruce Wayne
             </Typography>
             <Typography
               variant="body1"
-              sx={{
-                color: "yellow",
-                fontWeight: "bold",
-                fontSize: "1.2rem",
-                lineHeight: 1.6,
-              }}
+              sx={{ color: "yellow", fontSize: "1.15rem", lineHeight: 2 }}
             >
               Batman is the superhero protector of Gotham City, a tortured,
               brooding vigilante dressed as a bat who fights against evil and
@@ -81,20 +68,15 @@ const BioSection: React.FC = () => {
           </Stack>
         </Grid>
       </Grid>
-
-      {/* Divider Between Sections */}
       <Divider sx={{ my: 6, borderColor: "gray" }} />
-
-      {/* Tony Stark Section */}
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={6} alignItems="center">
         <Grid item xs={12} md={6}>
           <Card
             sx={{
               backgroundColor: "transparent",
               boxShadow: "none",
-              maxWidth: 345,
-              maxHeight: 500,
-              margin: "auto",
+              width: "100%",
+              minHeight: 350,
             }}
           >
             <CardMedia
@@ -103,8 +85,9 @@ const BioSection: React.FC = () => {
               image="/assets/Tony_Stark_suiting_up_in_Ironman_armor_to_fight.png"
               title="Tony Stark"
               sx={{
-                borderRadius: "10px",
-                height: "100%",
+                borderRadius: "16px",
+                width: "100%",
+                height: "auto",
                 objectFit: "cover",
               }}
             />
@@ -112,17 +95,15 @@ const BioSection: React.FC = () => {
         </Grid>
         <Grid item xs={12} md={6}>
           <Stack spacing={3}>
-            <Typography variant="h2" sx={{ color: "red", fontWeight: "bold" }}>
+            <Typography
+              variant="h2"
+              sx={{ color: "red", fontWeight: "bold", mb: 3 }}
+            >
               Tony Stark
             </Typography>
             <Typography
               variant="body1"
-              sx={{
-                color: "white",
-                fontWeight: "bold",
-                fontSize: "1.2rem",
-                lineHeight: 1.6,
-              }}
+              sx={{ color: "white", fontSize: "1.15rem", lineHeight: 2 }}
             >
               Anthony Edward "Tony" Stark is a billionaire industrialist, a
               founding member of the Avengers, and the former CEO of Stark

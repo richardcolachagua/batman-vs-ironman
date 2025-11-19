@@ -1,3 +1,4 @@
+//BatmanList.jsx
 import { BatmanItem } from "../BatmanSuits/BatmanItem";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";

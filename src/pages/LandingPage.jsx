@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "../styles.css";
-import { Container, Grid, Box, CssBaseline } from "@mui/material";
+import { Grid, Box, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import BioSection from "../components/BioSection";
 import AdvantagesSection from "../components/AdvantagesSection";
@@ -43,51 +42,52 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <>
-      <Box
-        sx={{
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <ThemeProvider theme={defaultTheme}>
-          <Container>
-            <CssBaseline />
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
-                <BioSection />
-              </Grid>
-
-              <Grid item xs={12}>
-                <AdvantagesSection />
-              </Grid>
-              <Grid>
-                <Ironman />
-              </Grid>
-              <Grid item xs={12}>
-                <CompaniesSection />
-              </Grid>
-              <Grid item xs={12}>
-                <CombatSkillsSection />
-              </Grid>
-              <Grid item xs={12}>
-                <StrategiesSection />
-              </Grid>
-              <Grid item xs={12}>
-                <MultimediaSection />
-              </Grid>
-              <Grid item xs={12}>
-                <VotingPollSection />
-              </Grid>
-              <Grid item xs={12}>
-                <ScrollToTopButton />
-              </Grid>
-            </Grid>
-          </Container>
-        </ThemeProvider>
-      </Box>
-    </>
+    <Box
+      sx={{
+        backgroundColor: "#111",
+        width: "100vw",
+        minHeight: "100vh",
+        p: 0,
+        m: 0,
+      }}
+    >
+      <ThemeProvider theme={defaultTheme}>
+        <CssBaseline />
+        <Grid
+          container
+          spacing={8}
+          sx={{ m: 0, width: "100vw", maxWidth: "100vw" }}
+        >
+          <Grid item xs={12}>
+            <BioSection />
+          </Grid>
+          <Grid item xs={12}>
+            <AdvantagesSection />
+          </Grid>
+          <Grid item xs={12}>
+            <Ironman />
+          </Grid>
+          <Grid item xs={12}>
+            <CompaniesSection />
+          </Grid>
+          <Grid item xs={12}>
+            <CombatSkillsSection />
+          </Grid>
+          <Grid item xs={12}>
+            <StrategiesSection />
+          </Grid>
+          <Grid item xs={12}>
+            <MultimediaSection />
+          </Grid>
+          <Grid item xs={12}>
+            <VotingPollSection />
+          </Grid>
+          <Grid item xs={12}>
+            <ScrollToTopButton />
+          </Grid>
+        </Grid>
+      </ThemeProvider>
+    </Box>
   );
 };
 

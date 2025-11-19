@@ -7,40 +7,36 @@ const AdvantagesSection: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "black",
-        backgroundSize: "cover",
-        width: "100&",
+        width: "100vw",
+        px: 0,
+        py: 8,
         m: 0,
-        px: { xs: 2, md: 6 },
-        py: { xs: 4, md: 6 },
-        overflow: "hidden",
       }}
     >
       <Typography
         variant="h4"
         align="center"
-        sx={{ color: "white", fontWeight: "bold", paddingBottom: "10px" }}
+        sx={{ color: "white", fontWeight: "bold", mb: 6 }}
       >
         Key Advantages
       </Typography>
-      <Grid container spacing={4}>
+      <Grid container spacing={6} sx={{ px: 0 }}>
         <Grid item xs={12} md={6}>
-          <Card sx={{ minHeight: 250, mx: 2 }}>
-            <CardContent sx={{ background: "black" }}>
+          <Card sx={{ minHeight: 220, width: "100%", boxShadow: 6 }}>
+            <CardContent sx={{ backgroundColor: "black" }}>
               <Typography
                 variant="h5"
                 sx={{
                   color: "white",
                   fontWeight: "bold",
-                  paddingBottom: "10px",
+                  mb: 2,
                 }}
               >
                 Batman's Advantages
               </Typography>
               <Typography
-                variant="body2"
-                color="textSecondary"
-                component="p"
-                sx={{ color: "white", fontWeight: "bold" }}
+                variant="body1"
+                sx={{ color: "white", fontSize: "1rem", lineHeight: 1.7 }}
               >
                 - Master strategist and detective
                 <br />
@@ -55,8 +51,17 @@ const AdvantagesSection: React.FC = () => {
         <Grid item xs={12} md={6}>
           <Card sx={{ minHeight: 250, mx: 2 }}>
             <CardContent>
-              <Typography variant="h5">Iron Man's Advantages</Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
+              <Typography
+                variant="h5"
+                sx={{ color: "red", fontWeight: "bold", mb: 2 }}
+              >
+                Iron Man's Advantages
+              </Typography>
+              <Typography
+                variant="body1"
+                sx={{ color: "white", fontSize: "1rem", lineHeight: 1.7 }}
+              >
+                {" "}
                 - Advanced technology and weaponry
                 <br />
                 - Superhuman strength and flight
