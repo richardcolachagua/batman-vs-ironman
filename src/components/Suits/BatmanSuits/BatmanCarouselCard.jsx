@@ -1,7 +1,5 @@
-import React from "react";
 import { Card, CardContent, Typography, Button } from "@mui/material";
 
-// You can further abstract 'picture' for more complex responsive images!
 export default function CarouselCard({
   title,
   description,
@@ -16,24 +14,37 @@ export default function CarouselCard({
         borderRadius: "20px",
         boxShadow: "0 6px 20px rgba(0,0,0,.34)",
         width: "100%",
-        height: "100%",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
         m: 0,
         p: 0,
+        boxSizing: "border-box",
       }}
     >
       <div
         className="media-container"
         style={{ aspectRatio: "8 / 5", width: "100%" }}
       >
-        <picture>
-          {imgSrcSet && <source srcSet={imgSrcSet} />}
+        {imgSrcSet ? (
+          <picture>
+            <source srcSet={imgSrcSet} />
+            <img
+              src={imgSrc}
+              alt={title}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: 16,
+              }}
+              decoding="async"
+            />
+          </picture>
+        ) : (
           <img
             src={imgSrc}
             alt={title}
-            className="fit-cover middle-center"
             style={{
               width: "100%",
               height: "100%",
@@ -42,7 +53,7 @@ export default function CarouselCard({
             }}
             decoding="async"
           />
-        </picture>
+        )}
       </div>
       <CardContent sx={{ p: 3 }}>
         <Typography
@@ -67,10 +78,12 @@ export default function CarouselCard({
           sx={{
             backgroundColor: "var(--button-bg-color)",
             color: "var(--button-color)",
-            border: `1px solid var(--button-border-color)`,
-            borderRadius: "32px",
-            textTransform: "none",
-            fontWeight: 500,
+            borderRadius: "8px",
+            mt: 1,
+            px: 2,
+            py: 1,
+            fontWeight: 600,
+            textTransform: "uppercase",
           }}
         >
           Glitchfy More

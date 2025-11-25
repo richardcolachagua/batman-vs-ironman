@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import batmanSuits from "./Data/batmanSuits";
 import "./batmanCarousel.css"; // use your refactored Codepen CSS
 

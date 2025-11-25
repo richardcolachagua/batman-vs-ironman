@@ -23,48 +23,53 @@
   --text-color: var(--light-color);
   --spacing: 1.5rem;
 }
-
 body {
   background: var(--dark-color);
   color: var(--text-color);
   font-family: Inter, Roboto, "Helvetica Neue", Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 .carousel {
-  width: 100vw;
+  width: 100%;
+  max-width: 100vw;
   background: var(--dark-color);
   padding: var(--spacing) 0;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 .swiper-container {
   width: 100%;
-  max-width: 75rem;
+  max-width: 1200px; /* Use reasonable max-width */
   margin: 0 auto;
   position: relative;
 }
 .swiper-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 .swiper-slide {
-  min-width: 340px;
-  max-width: 420px;
+  min-width: 260px;
+  max-width: 380px;
   margin-right: var(--spacing);
   background: transparent;
   display: flex;
   align-items: stretch;
+  box-sizing: border-box;
+  flex: 1 1 320px;
 }
 .card {
   background: var(--dark-color-darker);
   border-radius: 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.34);
-  padding: 0;
+  padding: var(--spacing);
   overflow: hidden;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
+  box-sizing: border-box;
 }
 .media-container {
   width: 100%;
@@ -89,10 +94,12 @@ body {
   margin: 0;
   line-height: 1.5;
 }
+/* Small screens */
 @media (max-width: 900px) {
   .swiper-slide {
-    min-width: 260px;
-    max-width: 320px;
+    min-width: 180px;
+    max-width: 98vw;
+    margin-right: 8px;
   }
 }
 @media (max-width: 600px) {
@@ -101,54 +108,10 @@ body {
     padding: 0;
   }
   .swiper-slide {
-    min-width: 90vw;
-    max-width: 97vw;
-    margin-right: 8px;
+    min-width: 95vw;
+    max-width: 100vw;
   }
   .card-text {
     padding: 1rem;
   }
-}
-
-/* Carousel UI elements (pagination, navigation) */
-.swiper-navigation-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  height: 100%;
-  pointer-events: none;
-}
-.swiper-next,
-.swiper-prev {
-  background: var(--dark-color-lighter);
-  color: var(--dark-color-darker);
-  border-radius: 50%;
-  padding: 0.5rem 0.85rem;
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-  pointer-events: auto;
-  transition: background 0.2s;
-  border: none;
-}
-.swiper-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 12px;
-}
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: var(--dark-color-lighter);
-  border-radius: 50%;
-  opacity: 0.6;
-  transition: opacity 0.2s;
-}
-.swiper-pagination-bullet-active {
-  background: var(--light-color);
-  opacity: 1;
 }

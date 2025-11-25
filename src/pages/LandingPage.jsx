@@ -29,69 +29,41 @@ const LandingPage = () => {
       touchMultiplier: 2,
       infinite: false,
     });
-
     function raf(time) {
       lenisRef.current.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-
     return () => {
       lenisRef.current.destroy();
     };
   }, []);
 
   return (
-    <Box
-      sx={{
-        backgroundColor: "#111",
-        width: "100vw",
-        minHeight: "100vh",
-        p: 0,
-        m: 0,
-      }}
-    >
-      <ThemeProvider theme={defaultTheme}>
-        <CssBaseline />
-        <Grid
-          container
-          spacing={8}
-          sx={{ m: 0, width: "100vw", maxWidth: "100vw" }}
-        >
-          <Grid item xs={12}>
-            <BioSection />
-          </Grid>
-          <Grid item xs={12}>
-            <AdvantagesSection />
-          </Grid>
-          <Grid item xs={12}>
-            <Batman />
-          </Grid>
-          <Grid item xs={12}>
-            <Ironman />
-          </Grid>
-          <Grid item xs={12}>
-            <CompaniesSection />
-          </Grid>
-          <Grid item xs={12}>
-            <CombatSkillsSection />
-          </Grid>
-          <Grid item xs={12}>
-            <StrategiesSection />
-          </Grid>
-          <Grid item xs={12}>
-            <MultimediaSection />
-          </Grid>
-          <Grid item xs={12}>
-            <VotingPollSection />
-          </Grid>
-          <Grid item xs={12}>
-            <ScrollToTopButton />
-          </Grid>
-        </Grid>
-      </ThemeProvider>
-    </Box>
+    <ThemeProvider theme={defaultTheme}>
+      <CssBaseline />
+      <Box
+        sx={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          width: "100%",
+          boxSizing: "border-box",
+          padding: { xs: "16px", md: "32px" },
+        }}
+      >
+        {/* Place your sections/grids as needed */}
+        <BioSection />
+        <Batman />
+        <Ironman />
+        <AdvantagesSection />
+        <CompaniesSection />
+        <CombatSkillsSection />
+        <StrategiesSection />
+        <MultimediaSection />
+        <VotingPollSection />
+        <ScrollToTopButton />
+      </Box>
+    </ThemeProvider>
   );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import CarouselCard from "./CarouselCard";
 import "./carousel.css";
 
@@ -30,65 +30,14 @@ export default function CarouselGroup() {
   }, []);
 
   return (
-    <div className="viewport-wrapper">
-      <div className="content-scroll">
-        <main className="main-content">
-          <section className="dummy-block" style={{ margin: "36px 0" }}>
-            <div>
-              <h2>ScrollSynced Carousel (Gsap + Swiper)</h2>
-              <h3>
-                Scroll Down
-                <br />↓
-              </h3>
+    <div className="carousel" id="carousel_1">
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          {carousel1Data.map((slide, index) => (
+            <div className="swiper-slide" key={index}>
+              <CarouselCard {...slide} />
             </div>
-          </section>
-          {/* CAROUSEL 1 */}
-          <section className="carousel" id="carousel_1">
-            <div className="wrapper">
-              <div className="text-before" style={{ paddingLeft: "2rem" }}>
-                <h2>Fragments of a Digital Collapse.</h2>
-              </div>
-              <div className="swiper-container">
-                <div className="swiper-column-gap"></div>
-                <div className="swiper-wrapper">
-                  {carousel1Data.map((slide, i) => (
-                    <div className="swiper-slide" key={i}>
-                      <CarouselCard {...slide} />
-                    </div>
-                  ))}
-                </div>
-                <div className="swiper-pagination-container">
-                  <div className="swiper-pagination-wrapper swiper-no-swiping">
-                    <div className="swiper-pagination"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          <section className="dummy-block" style={{ margin: "36px 0" }}>
-            <div>
-              <h3>
-                ↑<br />
-                Scroll Up
-              </h3>
-              <h2>ScrollSynced Carousel (Gsap + Swiper)</h2>
-            </div>
-          </section>
-        </main>
-      </div>
-      {/* Global blocker */}
-      <div id="app_blocker"></div>
-      {/* Site-wide resources bar */}
-      <div className="resources-layer">
-        <div className="resources">
-          <a href="https://www.lessrain.com">Less Rain GmbH</a>
-          <a href="https://codepen.io/collection/bNyZkZ">
-            JavaScript Codepen Collection
-          </a>
-          <a href="https://codepen.io/collection/vOBVrG">
-            Codepen Challenges Collection
-          </a>
+          ))}
         </div>
       </div>
     </div>
