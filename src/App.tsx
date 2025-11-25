@@ -3,8 +3,6 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import WelcomePage from "./pages/WelcomePage";
-import Batman from "./components/Suits/BatmanSuits/BatmanCarousel";
-import Ironman from "./components/Suits/IronmanSuits/Ironman";
 
 const App: React.FC = () => {
   return (
@@ -13,8 +11,6 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/landing/*" element={<LandingPage />} />
           <Route path="/welcomepage" element={<WelcomePage />} />
-          <Route path="/batman" element={<Batman />} />
-          <Route path="/ironman" element={<Ironman />} />
         </Routes>
       </Router>
     </>
