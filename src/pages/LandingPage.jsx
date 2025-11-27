@@ -52,7 +52,7 @@ const LandingPage = () => {
   return (
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
-      <Box sx={{ minHeight: "100vh", bgcolor: "black", color: "white" }}>
+      <Box sx={{ minHeight: "100vh", bgcolor: "white", color: "white" }}>
         <Box
           sx={{
             maxWidth: "1440px",

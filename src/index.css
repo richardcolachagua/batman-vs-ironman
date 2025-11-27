@@ -1,26 +1,14 @@
-/* src/index.css */
-body {
-  font-family: 'Roboto', sans-serif;
+/* styles.css or index.css */
+html,
+body,
+#root {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-.App {
-  text-align: center;
-}
-
-.video-responsive {
-  overflow: hidden;
-  padding-bottom: 56.25%;
-  position: relative;
-  height: 0;
-}
-
-.video-responsive iframe {
-  left: 0;
-  top: 0;
-  height: 100%;
   width: 100%;
-  position: absolute;
+  height: 100%;
+}
+
+/* Optional: prevent horizontal scroll when using 100vw sections */
+body {
+  overflow-x: hidden;
 }

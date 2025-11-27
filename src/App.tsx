@@ -1,4 +1,3 @@
-import "./styles.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
@@ -10,7 +9,7 @@ const App: React.FC = () => {
       <Router>
         <Routes>
           <Route path="/landing/*" element={<LandingPage />} />
-          <Route path="/welcomepage" element={<WelcomePage />} />
+          <Route path="/" element={<WelcomePage />} />
         </Routes>
       </Router>
     </>
