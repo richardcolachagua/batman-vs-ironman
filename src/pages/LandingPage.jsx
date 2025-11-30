@@ -53,21 +53,19 @@ const LandingPage = () => {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <Box sx={{ minHeight: "100vh", bgcolor: "white", color: "white" }}>
+        {/* 1. Character Origins full-bleed */}
+        <BioSection />
+
+        {/* 2+. Content in centered container */}
         <Box
           sx={{
             maxWidth: "1440px",
             mx: "auto",
             px: { xs: 1.5, sm: 3, md: 4 },
-            pt: { xs: 2, md: 3 },
+            pt: { xs: 6, md: 8 },
             pb: { xs: 6, md: 8 },
           }}
         >
-          {/* 1. Character Origins FIRST */}
-          <Box sx={{ mb: { xs: 6, md: 8 } }}>
-            <BioSection />
-          </Box>
-
-          {/* 2. Suits carousels */}
           <Grid
             container
             spacing={4}
@@ -81,7 +79,6 @@ const LandingPage = () => {
             </Grid>
           </Grid>
 
-          {/* 3. Remaining sections */}
           <Box sx={{ mb: { xs: 6, md: 8 } }}>
             <AdvantagesSection />
           </Box>

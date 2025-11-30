@@ -1,20 +1,17 @@
+// BioSection.tsx
 import React from "react";
-import { Typography, Grid, CardMedia, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 
 const BioSection: React.FC = () => {
   return (
     <>
-      {/* Title on top of image, no extra background strip */}
+      {/* Title in normal flow, not fixed/absolute */}
       <Box
         sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
           width: "100%",
-          zIndex: 2,
-          pt: { xs: 2, md: 3 },
+          py: { xs: 3, md: 4 },
           textAlign: "center",
-          pointerEvents: "none", // lets scroll, no blocking
+          bgcolor: "black",
         }}
       >
         <Typography
@@ -24,24 +21,21 @@ const BioSection: React.FC = () => {
             fontSize: { xs: "2.2rem", md: "3.2rem" },
             letterSpacing: { md: "0.08em" },
             color: "white",
-            textShadow: "0 0 12px rgba(0,0,0,0.9)",
           }}
         >
           Character Origins
         </Typography>
       </Box>
 
-      {/* Fullscreen Iron Man hero */}
+      {/* Fullscreen Iron Man */}
       <Box
         sx={{
           position: "relative",
-          width: "100vw",
-          height: "100vh",
+          width: "100%",
+          height: 800,
           overflow: "hidden",
-          m: 0,
         }}
       >
-        {/* Background image only (no black bg) */}
         <Box
           component="img"
           src="/assets/Tony_Stark_suiting_up_in_Ironman_armor_to_fight.png"
@@ -54,8 +48,6 @@ const BioSection: React.FC = () => {
             objectFit: "cover",
           }}
         />
-
-        {/* subtle dark veil just for readability */}
         <Box
           sx={{
             position: "absolute",
@@ -63,8 +55,6 @@ const BioSection: React.FC = () => {
             bgcolor: "rgba(0,0,0,0.35)",
           }}
         />
-
-        {/* Centered text */}
         <Box
           sx={{
             position: "relative",
@@ -90,35 +80,34 @@ const BioSection: React.FC = () => {
           >
             Iron Man
           </Typography>
-
           <Typography
             variant="body1"
             sx={{
               fontSize: { xs: "0.9rem", md: "1rem" },
               lineHeight: 1.7,
               maxWidth: "42rem",
+              color: "white",
+              textShadow: "0 0 14px rgba(0,0,0,0.9)",
             }}
           >
             Anthony Edward "Tony" Stark is a billionaire industrialist, a
             founding member of the Avengers, and the former CEO of Stark
             Industries. A brash but brilliant inventor, Stark is self-described
             as a genius, billionaire, playboy, and philanthropist. With his
-            great wealth and exceptional technical knowledge, Stark was one of
-            the world's most powerful men following the deaths of his parents
-            and enjoyed the playboy lifestyle for many years until he was
-            kidnapped by the Ten Rings in Afghanistan. With his life on the
-            line, Stark created an armored suit which he used to escape.
-            Afterward, he publicly revealed himself as Iron Man.
+            great wealth and exceptional technical knowledge, Stark became one
+            of the world&apos;s most powerful men until he was kidnapped by the
+            Ten Rings in Afghanistan and built the first Iron Man armor to
+            escape.
           </Typography>
         </Box>
       </Box>
 
-      {/* FULLSCREEN BATMAN */}
+      {/* Fullscreen Batman */}
       <Box
         sx={{
           position: "relative",
-          width: "100vw",
-          height: "100vh",
+          width: "100%",
+          height: 800,
           overflow: "hidden",
         }}
       >
@@ -134,19 +123,17 @@ const BioSection: React.FC = () => {
             objectFit: "cover",
           }}
         />
-
         <Box
           sx={{
             position: "absolute",
             inset: 0,
-            bgcolor: "rgba(0,0,0,0.4)", // a bit darker for Gotham
+            bgcolor: "rgba(0,0,0,0.4)",
           }}
         />
-
         <Box
           sx={{
             position: "relative",
-            zIndex: 2,
+            zIndex: 1,
             height: "100%",
             display: "flex",
             flexDirection: "column",
@@ -168,7 +155,6 @@ const BioSection: React.FC = () => {
           >
             Batman
           </Typography>
-
           <Typography
             variant="body1"
             sx={{
@@ -180,10 +166,10 @@ const BioSection: React.FC = () => {
             }}
           >
             Batman is the dark guardian of Gotham City, a vigilante who turns
-            the trauma of his parents’ murder into an unrelenting mission
+            the trauma of his parents&apos; murder into an unrelenting mission
             against crime. As Bruce Wayne he uses wealth, intellect, and
             advanced technology; as Batman he relies on fear, strategy, and
-            relentless training to outthink and outfight his enemies.
+            relentless training to outthink and outfight his enemies.{" "}
           </Typography>
         </Box>
       </Box>

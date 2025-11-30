@@ -3,21 +3,21 @@ export const batmanSuits = [
   {
     id: 0,
     name: "Classic Batman Suit (1989)",
-    image: "", // add image path/URL
+    image: "assets/batmansuits/ClassicBatmanSuit1989.webp",
     abilities:
       "Iconic black rubber suit with yellow oval bat symbol, sculpted muscles, and short ears. The classic comic-accurate look.",
   },
   {
     id: 1,
     name: "Batman Returns (1992)",
-    image: "",
+    image: "assets/batmansuits/BatmanReturnsSuit1992.jpeg",
     abilities:
       "Similar to 1989 but with more armor plating and a redesigned bat symbol.",
   },
   {
     id: 2,
     name: "Batman Forever (1995)",
-    image: "",
+    image: "assets/batmansuits/BatmanForeverSuit.webp",
     abilities:
       "Overhauled suit with a bigger bat symbol, codpiece, and sonar suit variant with silver accents.",
   },
