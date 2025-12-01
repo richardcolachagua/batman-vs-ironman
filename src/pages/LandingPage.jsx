@@ -1,7 +1,6 @@
 import { useEffect, useRef } from "react";
 import { Grid, Box, CssBaseline } from "@mui/material";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-
 import BioSection from "../components/BioSection";
 import AdvantagesSection from "../components/AdvantagesSection";
 import CompaniesSection from "../components/CompaniesSection";
@@ -71,12 +70,15 @@ const LandingPage = () => {
             spacing={4}
             sx={{ mb: { xs: 6, md: 8 }, alignItems: "center" }}
           >
-            <Grid item xs={12} md={6}>
-              <Ironman />
-            </Grid>
-            <Grid item xs={12} md={6}>
+            <Box sx={{ mb: { xs: 6, md: 8 } }}>
+              {/* Batman suits first */}
               <Batman />
-            </Grid>
+
+              {/* Add some spacing between them */}
+              <Box sx={{ mt: { xs: 4, md: 6 } }}>
+                <Ironman />
+              </Box>
+            </Box>
           </Grid>
 
           <Box sx={{ mb: { xs: 6, md: 8 } }}>
