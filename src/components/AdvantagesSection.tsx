@@ -61,7 +61,6 @@ const AdvantagesSection: React.FC = () => {
                 variant="body1"
                 sx={{ color: "white", fontSize: "1rem", lineHeight: 1.7 }}
               >
-                {" "}
                 - Advanced technology and weaponry
                 <br />
                 - Superhuman strength and flight

@@ -1,8 +1,8 @@
 import { useEffect } from "react";
-import batmanSuits from "./Data/batmanSuits";
-import "./batmanCarousel.css";
+import ironManSuits from "./Data/ironManSuits";
+import "../IronmanSuits/ironmanstyles.css";
 
-export default function BatmanCarousel() {
+export default function IronManCarousel() {
   useEffect(() => {
     if (window.createCarousel) {
       window.createCarousel().initialize({
@@ -17,7 +17,7 @@ export default function BatmanCarousel() {
     <section className="carousel" id="carousel_1">
       <div className="swiper-container">
         <div className="swiper-wrapper">
-          {batmanSuits.map((suit) => (
+          {ironManSuits.map((suit) => (
             <div className="swiper-slide" key={suit.name}>
               <article className="card">
                 <div className="media-container">

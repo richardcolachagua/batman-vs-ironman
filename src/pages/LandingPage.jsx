@@ -10,7 +10,7 @@ import MultimediaSection from "../components/MultimediaSection";
 import VotingPollSection from "../components/VotingPollSection";
 import ScrollToTopButton from "../components/ScrollToTopButton";
 import Batman from "../components/Suits/BatmanSuits/BatmanCarousel";
-import Ironman from "../components/Suits/IronmanSuits/Ironman";
+import Ironman from "../components/Suits/IronmanSuits/IronmanCarousel";
 import Lenis from "@studio-freight/lenis";
 
 const LandingPage = () => {
